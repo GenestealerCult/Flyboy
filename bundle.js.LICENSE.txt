@@ -17,3 +17,9 @@
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
+
+/** @preserve
+ * Counter block mode compatible with  Dr Brian Gladman fileenc.c
+ * derived from CryptoJS.mode.CTR
+ * Jan Hruby jhruby.web@gmail.com
+ */
