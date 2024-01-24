@@ -12,13 +12,28 @@ Is it realistic? Probably not; I can't know because I haven't got my rc plane ye
 
 Can it be used to try out the feel of FPV flying? I think so, yes. 
 
-Will it work on my computer? Try it! It's free and there's nothing to download or install. I can get ~55 fps on my crappy machine, and the fans don't scream all the time.
+Will it work on your computer? Try it! It's free and there's nothing to download or install. I can get ~55 fps on my crappy PC, and the fans don't scream all the time.
 
 ## Usage
 
 Connect your RC controller via cable or Bluetooth to your computer, go to [flyboy.app](https://flyboy.app) in your browser (preferably Chrome), and start flying.
 
 You can also test it with the WASD keys, but it works nicely with an XBOX controller, for example, if you don't have your proper radio yet. 
+
+## Troubleshooting
+
+Are you using Chrome (or Chromium) browser? They have the best optimised WebGL 3D accelerator.
+
+Are you sure the hardware accelerator is turned on in Chrome? Browse to address `chrome://flags` and set
+
+* Override software rendering list -> enalbled
+* GPU rasterization -> enalbled
+* Out of process rasterization -> enalbled
+
+Then browse to `chrome://gpu` and make confirm that
+
+* WebGL: Hardware accelerated
+* WebGL2: Hardware accelerated
 
 ## Credits
 
