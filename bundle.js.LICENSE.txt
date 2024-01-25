@@ -18,6 +18,14 @@
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 
+/**
+ * lil-gui
+ * https://lil-gui.georgealways.com
+ * @version 0.19.1
+ * @author George Michael Brower
+ * @license MIT
+ */
+
 /** @preserve
  * Counter block mode compatible with  Dr Brian Gladman fileenc.c
  * derived from CryptoJS.mode.CTR
