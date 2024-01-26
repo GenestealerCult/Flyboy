@@ -1,35 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"/><!--
-        # FLYBOY
-
-        Minimal FPV flight simulator for budget airline pilots.
-
-        ## Story
-
-        I've never flown an RC plane, but I just ordered one, and I needed a simulator to practice so I don't break the wing right away. 
-
-        None of the simulators I could find worked on my poor laptop, so I coded the FLYBOY.
-
-        Is it realistic? Probably not; I can't know because I haven't got my rc plane yet.
-
-        Can it be used to try out the feel of FPV flying? I think so, yes. 
-
-        Will it work on my computer? Try it! It's free and there's nothing to download or install. I can get ~55 fps on my crappy machine, and the fans don't scream all the time.
-
-        ## Usage
-
-        Connect your RC controller via cable or Bluetooth to your computer, go to [flyboy.app](https://flyboy.app) in your browser (preferably Chrome), and start flying.
-
-        You can also test it with the WASD keys, but it works nicely with an XBOX controller, for example, if you don't have your proper radio yet. 
-
-        ## Credits
-
-        The whole project is based on 
-
-        - the [THREE.js](https://github.com/mrdoob/three.js) by [mrdoob](https://github.com/mrdoob) (and contributors) 
-
-        - and the ["Sketchbook"](https://github.com/swift502/Sketchbook) game engine by [swift502](https://github.com/swift502) (and contributors).
-
-    --><title>FLYBOY - The Minimal RC flight simulator</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><link rel="apple-touch-icon" href="images/180.png"/><link rel="apple-touch-icon" sizes="76x76" href="images/76.png"/><link rel="apple-touch-icon" sizes="120x120" href="images/120.png"/><link rel="apple-touch-icon" sizes="152x152" href="images/152.png"/><link rel="apple-touch-icon" sizes="180x180" href="images/180.png"/><link rel="apple-touch-startup-image" href="images/512.png"/><style>html,
+<!doctype html><html><head><meta charset="utf-8"/><title>FLYBOY - The Minimal RC flight simulator</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><link rel="apple-touch-icon" href="images/180.png"/><link rel="apple-touch-icon" sizes="76x76" href="images/76.png"/><link rel="apple-touch-icon" sizes="120x120" href="images/120.png"/><link rel="apple-touch-icon" sizes="152x152" href="images/152.png"/><link rel="apple-touch-icon" sizes="180x180" href="images/180.png"/><link rel="apple-touch-startup-image" href="images/512.png"/><style>html,
         body {
             user-select: none;
             color: #bcad9f;
@@ -40,8 +9,6 @@
         }
 
         .hero {
-            -webkit-filter: drop-shadow(5px 25px 25px #222);
-            filter: drop-shadow(5px 25px 25px #222);
             background-image: url(/images/splash-tiny.png);
             background-size: contain;
             background-repeat: no-repeat;
@@ -50,14 +17,4 @@
 
         #loading-screen {
             background: #0F2027;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-
-        .vignette {
-            pointer-events: none;
-            box-shadow: 0 0 200px rgba(0, 0, 0, 0.5) inset;
-        }</style><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="X-UA-Compatible" contnet="IE=edge"><meta name="application-name" content="Flyboy"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Flyboy"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-touch-fullscreen" content="yes"><meta name="keywords" content="fpv, rc-plane, simulator, javascript, free, browser, fixed wing, wings, flight simulator"><meta property="og:title" content="FLYBOY.app"><meta property="og:description" content="Minimal FPV flight simulator for budget airline pilots"><meta property="og:type" content="website"><meta property="og:url" content="https://flyboy.app/"><meta property="og:image" content="https://flyboy.app/images/share.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FLYBOY.app"><meta name="twitter:description" content="Minimal FPV flight simulator for budget airline pilots"><meta name="twitter:image" content="https://flyboy.app/images/share.png"><script defer="defer" src="bundle.js"></script></head><body class="bg-black overflow-hidden strong"><div id="loading-screen" class="z-3 position-absolute d-flex h-100 w-100"><div class="d-flex flex-column flex-grow-1 justify-content-center align-items-center"><div class="h-50 h-50 hero" style="height: 50%; width: 50%;"></div><div class="small m-2">loading data ...</div></div></div><div class="vh-100 vw-100 d-flex flex-column"><div id="canvas-container" class="position-relative overflow-hidden flex-grow-1 order-1"><div class="position-absolute w-100 h-100 vignette"></div><div id="ui-container" class="position-absolute w-100 h-100 d-none"><div class="row h-100 w-100"><div class="col-1 col-md-2 d-flex flex-column justify-content-start justify-content-md-end"><div id="controls" class="controls small p-2 d-none d-md-block"></div></div><div class="col-10 col-md-8 d-flex flex-column justify-content-end"><div id="gamepads" class="d-flex justify-content-around p-5 p-md-2 mb-5 mb-md-0"><div><svg viewBox="-2.2 -2.2 4.4 4.4" width="128" height="128"><circle cx="0" cy="0" r="2.0" fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="0.2"></circle><path d="M0,-2L0,2M-2,0L2,0" stroke="#fff" stroke-width="0.1"></path><circle cx="0" cy="0" r="1.0" fill="#222" fill-opacity=".8" stroke="#fff" stroke-width="0.1" id="controller-axis-1"></circle></svg></div><div></div><div><svg viewBox="-2.2 -2.2 4.4 4.4" width="128" height="128"><circle cx="0" cy="0" r="2.0" fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="0.2"></circle><path d="M0,-2L0,2M-2,0L2,0" stroke="#fff" stroke-width="0.1"></path><circle cx="0" cy="0" r="1.0" fill="#222" fill-opacity=".8" stroke="#fff" stroke-width="0.1" id="controller-axis-2"></circle></svg></div></div></div><div class="col-1 col-md-2 d-flex flex-column justify-content-end"><div id="altitude" class="controls altitude align-self-end small overflow-hidden h-100" style="width: 50px;"><div id="altitude-meter" class="position-absolute"></div></div></div></div></div></div><div class="justify-content-between align-items-center d-flex order-0 order-md-2"><img src="/images/logo-tag.png" height="35px"/><div id="controls-mobile" class="controls small p-2 d-flex d-md-none"></div><div id="footer-middle" class="text-center d-none d-md-block"><div class="logo-tag" id="controller-id">Connect your controller</div><span class="logo-tag">Configure channels: <a href="#AETR56">AETR56</a> <a href="#TAER">TAER</a> or <a href="#R-TA-E">Gamepad</a></span></div><div id="stats"></div></div></div><div id="datgui" class="d-none d-md-block"></div><div id="running" class="d-none"></div></body></html>
+        }</style><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="X-UA-Compatible" contnet="IE=edge"><meta name="application-name" content="Flyboy"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Flyboy"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-touch-fullscreen" content="yes"><meta name="keywords" content="fpv, rc-plane, simulator, javascript, free, browser, fixed wing, wings, flight simulator"><meta property="og:title" content="FLYBOY.app"><meta property="og:description" content="Minimal FPV flight simulator for budget airline pilots"><meta property="og:type" content="website"><meta property="og:url" content="https://flyboy.app/"><meta property="og:image" content="https://flyboy.app/images/share.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="FLYBOY.app"><meta name="twitter:description" content="Minimal FPV flight simulator for budget airline pilots"><meta name="twitter:image" content="https://flyboy.app/images/share.png"><script defer="defer" src="bundle.js"></script></head><body class="bg-black overflow-hidden strong"><div id="loading-screen" class="z-3 position-absolute d-flex h-100 w-100"><div class="d-flex flex-column flex-grow-1 justify-content-center align-items-center"><div class="h-50 h-50 hero" style="height: 50%; width: 50%;"></div><div class="small m-2">loading data ...</div></div></div><div class="vh-100 vw-100 d-flex flex-column"><div id="canvas-container" class="position-relative overflow-hidden flex-grow-1 order-1"><div id="ui-container" class="position-absolute w-100 h-100 d-none"><div class="row h-100 w-100"><div class="col-1 col-md-2 d-flex flex-column justify-content-start justify-content-md-end"><div id="controls" class="controls small p-2 d-none d-md-block"></div></div><div class="col-10 col-md-8 d-flex flex-column justify-content-end"><div id="gamepads" class="d-flex justify-content-around p-5 p-md-2 mb-5 mb-md-0"><div><svg viewBox="-2.2 -2.2 4.4 4.4" width="128" height="128"><circle cx="0" cy="0" r="2.0" fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="0.2"></circle><path d="M0,-2L0,2M-2,0L2,0" stroke="#fff" stroke-width="0.1"></path><circle cx="0" cy="0" r="1.0" fill="#222" fill-opacity=".8" stroke="#fff" stroke-width="0.1" id="controller-axis-1"></circle></svg></div><div></div><div><svg viewBox="-2.2 -2.2 4.4 4.4" width="128" height="128"><circle cx="0" cy="0" r="2.0" fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="0.2"></circle><path d="M0,-2L0,2M-2,0L2,0" stroke="#fff" stroke-width="0.1"></path><circle cx="0" cy="0" r="1.0" fill="#222" fill-opacity=".8" stroke="#fff" stroke-width="0.1" id="controller-axis-2"></circle></svg></div></div></div><div class="col-1 col-md-2 d-flex flex-column justify-content-end"><div id="altitude" class="controls altitude align-self-end small overflow-hidden h-100" style="width: 50px;"><div id="altitude-meter" class="position-absolute"></div></div></div></div></div></div><div class="justify-content-between align-items-center d-flex order-0 order-md-2"><img src="/images/logo-tag.png" height="35px"/><div id="controls-mobile" class="controls small p-2 d-flex d-md-none"></div><div id="footer-middle" class="text-center d-none d-md-block"><div class="logo-tag" id="controller-id">Connect your controller</div><span class="logo-tag">Configure channels: <a href="#AETR56">AETR56</a> <a href="#TAER">TAER</a> or <a href="#R-TA-E">Gamepad</a></span></div><div id="stats"></div></div></div><div id="datgui" class="d-none d-md-block"></div><div id="running" class="d-none"></div></body></html>
