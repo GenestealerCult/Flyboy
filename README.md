@@ -1,6 +1,6 @@
 # FLYBOY
 
-Minimal FPV flight simulator for budget airline pilots.
+The Minimal RC flight simulator
 
 ## Story
 
