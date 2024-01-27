@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(c76f40a0bff37ba609fe.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Archivo Black';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(5ce48757583f913a5009.woff2) format('woff2');
+}
+/* Imports */
+
+/* Base */
+
+button,
+.logo-tag,
+.logo-tag a {
+	text-align: center;
+	font-family: 'Archivo Black', sans-serif !important;
+	text-transform: uppercase !important;
+}
+
+.confirm {
+	color: #efefef !important;
+	background-color: #b55945 !important;
+}
+
+.confirm:hover {
+	color: #ffffff !important;
+}
+
+.controls {
+	color: #27232a;
+	font-weight: bold;
+}
+
+#datgui {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+#stats div {
+	position: relative !important;
+	height: 50px !important;
+	overflow: hidden !important;
+}
+
+#altitude-meter {
+	font-family: 'Archivo Black', sans-serif !important;
+	font-size: 20px;
+}
